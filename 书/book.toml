@@ -1,0 +1,10 @@
+[book]
+authors = ["secext2022"]
+language = "zh-CN"
+multilingual = false
+src = "源"
+title = "歧语言之书"
+
+[output.html]
+site-url = "/nb/"
+git-repository-url = "https://github.com/fm-elpac/nb"

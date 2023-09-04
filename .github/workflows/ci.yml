@@ -1,0 +1,20 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    # mdbook
+    - run: |
+        mkdir bin &&
+        curl -sSL https://github.com/rust-lang/mdBook/releases/download/v0.4.34/mdbook-v0.4.34-x86_64-unknown-linux-gnu.tar.gz | tar -xz --directory=bin
+    - run: bin/mdbook --version
+
+    - run: cd 书 && ../bin/mdbook build
