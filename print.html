@@ -1,0 +1,628 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>歧语言之书</title>
+        <meta name="robots" content="noindex" />
+
+
+        <!-- Custom HTML head -->
+        
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+    </head>
+    <body>
+    <div id="body-container">
+        <!-- Provide site root to javascript -->
+        <script>
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            var html = document.querySelector('html');
+            var sidebar = null;
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item expanded "><a href="1_简介/index.html"><strong aria-hidden="true">1.</strong> 简介</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1_简介/1_常见问题.html"><strong aria-hidden="true">1.1.</strong> 常见问题</a></li></ol></li><li class="chapter-item expanded "><a href="2_入门教程/index.html"><strong aria-hidden="true">2.</strong> 入门教程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2_入门教程/1_网页体验平台.html"><strong aria-hidden="true">2.1.</strong> 网页体验平台</a></li><li class="chapter-item expanded "><a href="2_入门教程/2_本地开发环境搭建.html"><strong aria-hidden="true">2.2.</strong> 本地开发环境搭建</a></li><li class="chapter-item expanded "><a href="2_入门教程/3_第一个程序.html"><strong aria-hidden="true">2.3.</strong> 第一个程序</a></li><li class="chapter-item expanded "><a href="2_入门教程/4_变量.html"><strong aria-hidden="true">2.4.</strong> 变量</a></li><li class="chapter-item expanded "><a href="2_入门教程/5_函数.html"><strong aria-hidden="true">2.5.</strong> 函数</a></li><li class="chapter-item expanded "><a href="2_入门教程/6_分支.html"><strong aria-hidden="true">2.6.</strong> 分支</a></li><li class="chapter-item expanded "><a href="2_入门教程/7_循环.html"><strong aria-hidden="true">2.7.</strong> 循环</a></li><li class="chapter-item expanded "><a href="2_入门教程/8_定义类型.html"><strong aria-hidden="true">2.8.</strong> 定义类型</a></li><li class="chapter-item expanded "><a href="2_入门教程/9_模块与导入导出.html"><strong aria-hidden="true">2.9.</strong> 模块与导入导出</a></li><li class="chapter-item expanded "><a href="2_入门教程/10_输入输出.html"><strong aria-hidden="true">2.10.</strong> 输入输出</a></li></ol></li><li class="chapter-item expanded "><a href="3_参考手册/index.html"><strong aria-hidden="true">3.</strong> 参考手册</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="3_参考手册/1_源代码文件.html"><strong aria-hidden="true">3.1.</strong> 源代码文件</a></li><li class="chapter-item expanded "><a href="3_参考手册/2_特殊字符.html"><strong aria-hidden="true">3.2.</strong> 特殊字符</a></li><li class="chapter-item expanded "><a href="3_参考手册/3_内置数据类型.html"><strong aria-hidden="true">3.3.</strong> 内置数据类型</a></li><li class="chapter-item expanded "><a href="3_参考手册/4_关键词.html"><strong aria-hidden="true">3.4.</strong> 关键词</a></li><li class="chapter-item expanded "><a href="3_参考手册/5_字符串.html"><strong aria-hidden="true">3.5.</strong> 字符串</a></li><li class="chapter-item expanded "><a href="3_参考手册/6_数字.html"><strong aria-hidden="true">3.6.</strong> 数字</a></li><li class="chapter-item expanded "><a href="3_参考手册/7_变量.html"><strong aria-hidden="true">3.7.</strong> 变量</a></li><li class="chapter-item expanded "><a href="3_参考手册/8_函数.html"><strong aria-hidden="true">3.8.</strong> 函数</a></li><li class="chapter-item expanded "><a href="3_参考手册/9_内置函数.html"><strong aria-hidden="true">3.9.</strong> 内置函数</a></li><li class="chapter-item expanded "><a href="3_参考手册/10_定义类型和枚举.html"><strong aria-hidden="true">3.10.</strong> 定义类型和枚举</a></li><li class="chapter-item expanded "><a href="3_参考手册/11_运算符.html"><strong aria-hidden="true">3.11.</strong> 运算符</a></li><li class="chapter-item expanded "><a href="3_参考手册/12_表达式和语句.html"><strong aria-hidden="true">3.12.</strong> 表达式和语句</a></li><li class="chapter-item expanded "><a href="3_参考手册/13_分支.html"><strong aria-hidden="true">3.13.</strong> 分支</a></li><li class="chapter-item expanded "><a href="3_参考手册/14_循环.html"><strong aria-hidden="true">3.14.</strong> 循环</a></li><li class="chapter-item expanded "><a href="3_参考手册/15_模式匹配.html"><strong aria-hidden="true">3.15.</strong> 模式匹配</a></li><li class="chapter-item expanded "><a href="3_参考手册/16_模块.html"><strong aria-hidden="true">3.16.</strong> 模块</a></li><li class="chapter-item expanded "><a href="3_参考手册/17_标准库.html"><strong aria-hidden="true">3.17.</strong> 标准库</a></li><li class="chapter-item expanded "><a href="3_参考手册/18_编译器错误代码.html"><strong aria-hidden="true">3.18.</strong> 编译器错误代码</a></li></ol></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <!-- Track and set sidebar scroll position -->
+        <script>
+            var sidebarScrollbox = document.querySelector('#sidebar .sidebar-scrollbox');
+            sidebarScrollbox.addEventListener('click', function(e) {
+                if (e.target.tagName === 'A') {
+                    sessionStorage.setItem('sidebar-scroll', sidebarScrollbox.scrollTop);
+                }
+            }, { passive: true });
+            var sidebarScrollTop = sessionStorage.getItem('sidebar-scroll');
+            sessionStorage.removeItem('sidebar-scroll');
+            if (sidebarScrollTop) {
+                // preserve sidebar scroll position when navigating via links within sidebar
+                sidebarScrollbox.scrollTop = sidebarScrollTop;
+            } else {
+                // scroll sidebar to current active section when navigating via "next/previous chapter" buttons
+                var activeSection = document.querySelector('#sidebar .active');
+                if (activeSection) {
+                    activeSection.scrollIntoView({ block: 'center' });
+                }
+            }
+        </script>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">歧语言之书</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/fm-elpac/nb" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <p>欢迎阅读 《歧语言之书》 !</p>
+<p>本书是歧语言的主要文档, 包含入门教程, 参考手册等。</p>
+<p><strong>草稿</strong>: 注意目前施工中, 部分内容不完整。</p>
+<h2 id="简介"><a class="header" href="#简介">简介</a></h2>
+<p>无歧义中文编程语言, 简称 <strong>歧语言</strong> (nb_lang)。</p>
+<p>No amBiguous Chinese programming language, short as NB.</p>
+<h2 id="主要特点"><a class="header" href="#主要特点">主要特点</a></h2>
+<ul>
+<li>
+<p>基于中文的语法设计, 无空格语法。</p>
+<p>现代汉语, 简体中文 (<code>zh_CN</code>)</p>
+</li>
+<li>
+<p>语言设计参考:</p>
+<ul>
+<li><a href="https://www.python.org/">python</a></li>
+<li><a href="https://www.moonbitlang.cn/">月兔 (moonbit)</a></li>
+<li><a href="https://www.rust-lang.org/">rust</a></li>
+<li>js</li>
+</ul>
+</li>
+<li>
+<p>使用的底层技术:</p>
+<ul>
+<li><a href="https://webassembly.org/">WebAssembly (wasm)</a></li>
+<li><a href="https://www.moonbitlang.cn/">月兔 (moonbit)</a></li>
+</ul>
+</li>
+</ul>
+<h2 id="栗子"><a class="header" href="#栗子">栗子</a></h2>
+<ul>
+<li>
+<p><code>第一个程序.歧</code></p>
+<pre><code>输出 666。
+</code></pre>
+</li>
+<li>
+<p><code>循环.歧</code></p>
+<pre><code># 这是注释
+
+循环 3 次:
+  写 6。
+
+换行。
+</code></pre>
+</li>
+<li>
+<p><code>吃货.歧</code></p>
+<pre><code>定义类型吃货:
+  名字(文本)。
+
+定义吃, 参数自己(吃货)、东西(文本):
+  输出 &quot;\(自己的名字)吃了\(东西)&quot;。
+
+# 测试
+定义变量窝, 吃货。  # 窝是吃货 ^_^
+窝的名字是 &quot;喵喵&quot;。
+
+定义变量饭, &quot;汤面条&quot;。
+
+窝吃饭。  # 喵喵吃了汤面条
+</code></pre>
+</li>
+</ul>
+<h2 id="相关链接"><a class="header" href="#相关链接">相关链接</a></h2>
+<ul>
+<li>
+<p>歧语言设计文档: <a href="https://github.com/fm-elpac/nb">https://github.com/fm-elpac/nb</a></p>
+</li>
+<li>
+<p>《歧语言之书》 <a href="https://fm-elpac.github.io/nb">https://fm-elpac.github.io/nb</a></p>
+</li>
+<li>
+<p>歧语言编译器: <a href="https://github.com/fm-elpac/nbc">https://github.com/fm-elpac/nbc</a></p>
+</li>
+</ul>
+<h2 id="license"><a class="header" href="#license">LICENSE</a></h2>
+<p><a href="https://creativecommons.org/licenses/by-sa/4.0/"><code>CC-BY-SA 4.0+</code></a></p>
+<p>本书使用 CC-BY-SA 4.0 许可发布。
+This book is released under CC-BY-SA 4.0 LICENSE.</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="常见问题-faq"><a class="header" href="#常见问题-faq">常见问题 (FAQ)</a></h1>
+<ul>
+<li><a href="1_%E7%AE%80%E4%BB%8B/1_%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9%E4%B8%AD%E6%96%87%E7%BC%96%E7%A8%8B-">为什么选择中文编程 ?</a></li>
+<li><a href="1_%E7%AE%80%E4%BB%8B/1_%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9-webassembly-">为什么选择 WebAssembly ?</a></li>
+<li><a href="1_%E7%AE%80%E4%BB%8B/1_%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9-%E6%9C%88%E5%85%94-">为什么选择 月兔 ?</a></li>
+<li><a href="1_%E7%AE%80%E4%BB%8B/1_%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8-%E5%8F%8C%E6%8B%BC-%E8%BE%93%E5%85%A5%E6%B3%95-">为什么推荐使用 双拼 输入法 ?</a></li>
+</ul>
+<h2 id="为什么选择中文编程-"><a class="header" href="#为什么选择中文编程-">为什么选择中文编程 ?</a></h2>
+<p>希望可以提高代码的可读性, 降低编程的学习难度, 让更多的中国人能够编程。</p>
+<h2 id="为什么选择-webassembly-"><a class="header" href="#为什么选择-webassembly-">为什么选择 WebAssembly ?</a></h2>
+<ul>
+<li>
+<p><strong>开放标准, 较好的生态与工具支持</strong>:
+WebAssembly 是 web 技术 (标准) 的一部分, 被广泛支持和使用。
+多种编程语言的代码可以编译成 WebAssembly 运行。
+有许多相关的工具可以使用。</p>
+</li>
+<li>
+<p><strong>优秀的跨平台能力, 实现一次编译到处运行</strong>:
+几乎所有的硬件设备 (单片机等资源特别少的硬件除外),
+CPU, 操作系统, 运行环境等都能运行 WebAssembly。
+包括手机, 台式机 (PC), 服务器 (云端) 等。
+运行环境有浏览器 (比如 chrome), wasmer, deno, node.js 等。</p>
+</li>
+<li>
+<p><strong>较高的性能</strong>:
+WebAssembly 的运行速度接近原生二进制代码 (native C/C++)。</p>
+</li>
+</ul>
+<h2 id="为什么选择-月兔-"><a class="header" href="#为什么选择-月兔-">为什么选择 月兔 ?</a></h2>
+<p>歧语言的实现方式为编译成月兔代码。</p>
+<ul>
+<li>
+<p>月兔是国产编程语言, 开源, 更适合中文编程的理念。</p>
+</li>
+<li>
+<p>月兔能够编译成 WebAssembly 或 js, 能够在很广泛的设备/环境中运行。</p>
+</li>
+<li>
+<p>月兔在编译生成代码的大小 (越小越好) 和运行速度 (越快越好) 方面,
+表现十分优秀。</p>
+</li>
+<li>
+<p>强大的语言能力, 类似 rust 的语言设计:
+自动内存管理 (GC), 闭包 (closure), 枚举 (enum), 模式匹配 (match) 等。</p>
+</li>
+<li>
+<p>更好的生态以及编译工具:
+歧语言本身没什么生态, 借助月兔可以缓解生态问题。
+如果歧语言从头开发编译工具, 很难达到月兔的水平。</p>
+</li>
+</ul>
+<h2 id="为什么推荐使用-双拼-输入法-"><a class="header" href="#为什么推荐使用-双拼-输入法-">为什么推荐使用 双拼 输入法 ?</a></h2>
+<ul>
+<li>
+<p>相比全拼, 双拼可以显著减少击键次数, 加快输入速度。</p>
+</li>
+<li>
+<p>相比五笔, 双拼的学习难度显著更低。
+双拼只比全拼难一点, 通常在一年内即可熟练掌握。</p>
+</li>
+<li>
+<p>双拼的一个大问题, 是存在许多种不同的双拼方案。
+在此推荐使用 自然码 方案, 因为自然码的支持很广泛,
+各种操作系统基本都内置了对自然码的支持。</p>
+</li>
+</ul>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="入门教程"><a class="header" href="#入门教程">入门教程</a></h1>
+<p>这里是歧语言的入门教程。</p>
+<p>本教程不要求读者有任何编程基础, 也就是不要求读者之前学习过别的编程语言。
+(但是要求初中毕业。)
+本教程也不要求读者具有英语基础, 也就是不要求词汇量。
+(但是要求能读写 26 个英文字母。)</p>
+<p>如果日常能够熟练的使用计算机 (PC), 那就更好了 !</p>
+<h2 id="关于编程"><a class="header" href="#关于编程">关于编程</a></h2>
+<p>TODO</p>
+<h2 id="关于学习编程语言"><a class="header" href="#关于学习编程语言">关于学习编程语言</a></h2>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="网页体验平台"><a class="header" href="#网页体验平台">网页体验平台</a></h1>
+<p>为了方便上手体验歧语言, 这里准备了网页体验平台, 只需在浏览器中打开即可使用。</p>
+<p>点击链接跳转: (尚未完成)</p>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="本地开发环境搭建"><a class="header" href="#本地开发环境搭建">本地开发环境搭建</a></h1>
+<p>众所周知, 学习编程遭遇的第一个巨大困难就是, 在本地搭建相应的开发环境。
+在本地搭建开发环境相对是比较复杂的, 特别对于尚未入门的初学者来说。</p>
+<p>所以你可以直接跳过本章, 以后再回来研究这个问题。
+刚开始学习的时候, 建议直接使用 <a href="2_%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/./1_%E7%BD%91%E9%A1%B5%E4%BD%93%E9%AA%8C%E5%B9%B3%E5%8F%B0.html">网页体验平台</a> 来运行歧语言代码。</p>
+<h2 id="安装步骤-windows"><a class="header" href="#安装步骤-windows">安装步骤 (Windows)</a></h2>
+<p>好吧, 看来你已经做好充分的心理准备了, 那我们开始吧 !</p>
+<p>此处的说明适用于 Windows 10 或更新版本的操作系统。
+如果你使用 <code>GNU/Linux</code> 进行开发, <a href="2_%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/2_%E6%9C%AC%E5%9C%B0%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA.html#%E5%AE%89%E8%A3%85%E6%AD%A5%E9%AA%A4-gnulinux">请见此处</a>。</p>
+<p>TODO</p>
+<h2 id="安装步骤-gnulinux"><a class="header" href="#安装步骤-gnulinux">安装步骤 (GNU/Linux)</a></h2>
+<p>此处的说明适用于 <code>GNU/Linux</code> 操作系统,
+比如 <a href="https://archlinux.org/"><code>ArchLinux</code></a>,
+<a href="https://www.debian.org/"><code>Debian</code></a>,
+<a href="https://ubuntu.com/desktop"><code>Ubuntu</code></a>,
+<a href="https://www.deepin.org/index/zh"><code>深度操作系统deepin</code></a>,
+<a href="https://www.fedoraproject.org/"><code>Fedora</code></a>
+等。</p>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="第一个程序"><a class="header" href="#第一个程序">第一个程序</a></h1>
+<p>万事开头难, 本章的目标是写出第一个能运行的 (简单) 程序, 实现从 0 到 1 的突破 !</p>
+<p>(草稿: 尚未实现) 打开 <a href="2_%E5%85%A5%E9%97%A8%E6%95%99%E7%A8%8B/./1_%E7%BD%91%E9%A1%B5%E4%BD%93%E9%AA%8C%E5%B9%B3%E5%8F%B0.html">网页体验平台</a>, 写入如下代码:</p>
+<pre><code>输出 666。
+</code></pre>
+<p>点击 &quot;运行&quot;。</p>
+<p>看到输出了嘛 ?  <code>666</code></p>
+<p>祝贺你, 已经学会写代码了, 正式成为了一个程序员 !</p>
+<p>本章到此结束。</p>
+<h2 id="第二个程序"><a class="header" href="#第二个程序">第二个程序</a></h2>
+<p>慢着, 既然是程序代码, 就可以 (随便) 修改, 比如:</p>
+<pre><code>输出 555。
+</code></pre>
+<p>比如:</p>
+<pre><code>输出 2333。
+</code></pre>
+<p>比如:</p>
+<pre><code>输出 &quot;世界, 你好&quot;。
+</code></pre>
+<p>程序代码是一行一行按顺序执行的, 比如:</p>
+<pre><code>输出 111。
+输出 222。
+输出 333。
+</code></pre>
+<p>空白的行会被忽略, 所以可以随意添加空行:</p>
+<pre><code>
+输出 0。
+
+输出 -2。
+
+
+输出 3.141592653589793。
+
+
+
+</code></pre>
+<h2 id="源代码文件"><a class="header" href="#源代码文件">源代码文件</a></h2>
+<p>我们写的代码一般叫做 &quot;源代码&quot;, 就是某种方便人类阅读理解的形式。
+源代码会被编译器转换成 &quot;目标代码&quot;, 也就是计算机 (CPU) 可以执行的形式。</p>
+<p>源代码作为字符串存储在文本文件中, 这种文件叫做 &quot;源文件&quot;。
+被编译器编译后, 可以变成 &quot;可执行文件&quot; (二进制文件),
+比如 Windows 操作系统中的 <code>.exe</code> 文件 (文件格式为 <code>PE</code>)。
+GNU/Linux 操作系统的可执行文件格式为 <code>ELF</code>。</p>
+<p>歧语言规定, 源文件必须以 <code>utf-8</code> 编码存储。
+歧语言源文件的文件名后缀为 <code>.歧</code>, 比如 <code>第一个程序.歧</code>。</p>
+<h2 id="注释和缩进"><a class="header" href="#注释和缩进">注释和缩进</a></h2>
+<p>为了让代码更容易阅读, 大部分编程语言都支持注释。
+注释就是专门让人类看的, 编译器会忽略注释, 所以注释的内容可以随便写。
+代码运行的时候, 就好像注释根本不存在一样。</p>
+<p>歧语言的注释以 <code>#</code> 开始, 到一行的末尾结束, 比如:</p>
+<pre><code># 这是注释
+输出 666。  # 这也是注释 ^_^
+# 这还是注释, 吼吼吼 ~
+</code></pre>
+<p>在下面这个栗子中, 第一行因为是注释, 所以不会运行:</p>
+<pre><code>#输出 555。
+输出 666。
+</code></pre>
+<h3 id="缩进"><a class="header" href="#缩进">缩进</a></h3>
+<p>歧语言使用缩进来区分代码块。</p>
+<p>歧语言规定, 每级缩进必须使用 2 个空格, 比如:</p>
+<pre><code>循环 3 次:
+  输出 2333。
+</code></pre>
+<p>注意 &quot;输出&quot; 前面的 2 个空格。</p>
+<p>缩进也可能有多个层级, 比如:</p>
+<pre><code>循环 3 次:
+  输出 100。
+
+  循环 2 次:
+    输出 200。
+
+  输出 300。
+</code></pre>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="变量"><a class="header" href="#变量">变量</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="函数"><a class="header" href="#函数">函数</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="分支"><a class="header" href="#分支">分支</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="循环"><a class="header" href="#循环">循环</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="定义类型"><a class="header" href="#定义类型">定义类型</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="模块与导入导出"><a class="header" href="#模块与导入导出">模块与导入导出</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="输入输出"><a class="header" href="#输入输出">输入输出</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="参考手册"><a class="header" href="#参考手册">参考手册</a></h1>
+<p>本参考手册详细描述歧语言的各个方面。</p>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="源代码文件-1"><a class="header" href="#源代码文件-1">源代码文件</a></h1>
+<p>歧语言的源文件必须使用 <code>utf-8</code> 编码,
+使用 UNIX 风格的换行符 (LF <code>0x0a</code>)。</p>
+<p>歧语言的源文件的文件名后缀为 <code>.歧</code>, 比如 <code>测试.歧</code>。</p>
+<h2 id="注释"><a class="header" href="#注释">注释</a></h2>
+<p>歧语言的注释以 <code>#</code> 开始, 至行尾结束 (类似 python)。</p>
+<h2 id="缩进-1"><a class="header" href="#缩进-1">缩进</a></h2>
+<p>歧语言使用缩进来区分代码块 (类似 python), 每级缩进必须使用 2 个空格。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="特殊字符"><a class="header" href="#特殊字符">特殊字符</a></h1>
+<p>这些字符会被词法分析 (token) 特殊处理:</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">数值</th><th style="text-align: left">字符</th><th style="text-align: left">说明</th><th style="text-align: left">备注</th></tr></thead><tbody>
+<tr><td style="text-align: left">0x0a</td><td style="text-align: left"><code>\n</code> (换行)</td><td style="text-align: left">分隔不同的文本行</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x20</td><td style="text-align: left"><code> </code> (空格)</td><td style="text-align: left">行首缩进, 以及代码中的空白 (解决歧义: 手动分词)</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x22</td><td style="text-align: left"><code>&quot;</code></td><td style="text-align: left">双引号: 用于字符串</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x23</td><td style="text-align: left"><code>#</code></td><td style="text-align: left">注释</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x28</td><td style="text-align: left"><code>(</code></td><td style="text-align: left">小括号: 用于多种语法</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x29</td><td style="text-align: left"><code>)</code></td><td style="text-align: left">小括号: 用于多种语法</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x2c</td><td style="text-align: left"><code>,</code></td><td style="text-align: left">逗号: 用于多种语法</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x3a</td><td style="text-align: left"><code>:</code></td><td style="text-align: left">冒号: 用于代码块, 字典</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x3d</td><td style="text-align: left"><code>=</code></td><td style="text-align: left">等号: 用于赋值语句</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x5b</td><td style="text-align: left"><code>[</code></td><td style="text-align: left">中括号: 用于数组及下标访问</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x5c</td><td style="text-align: left"><code>\</code></td><td style="text-align: left">反斜杠: 字符串转义</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x5d</td><td style="text-align: left"><code>]</code></td><td style="text-align: left">中括号: 用于数组及下标访问</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x60</td><td style="text-align: left">`</td><td style="text-align: left">反引号: 用于解决歧义 (禁止分词)</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x7b</td><td style="text-align: left"><code>{</code></td><td style="text-align: left">大括号: 用于字典</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x7d</td><td style="text-align: left"><code>}</code></td><td style="text-align: left">大括号: 用于字典</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x3001</td><td style="text-align: left"><code>、</code></td><td style="text-align: left">顿号: 用于分隔多个项目</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x3002</td><td style="text-align: left"><code>。</code></td><td style="text-align: left">句号: 用于结束语句</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left">0x30 ~ 0x39 0x2e 0x5f</td><td style="text-align: left"><code>0</code> ~ <code>9</code> <code>.</code> <code>_</code></td><td style="text-align: left">用于数字</td><td style="text-align: left"></td></tr>
+</tbody></table>
+</div>
+<p>源代码中禁止出现的 Unicode 字符: TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="内置数据类型"><a class="header" href="#内置数据类型">内置数据类型</a></h1>
+<h2 id="简单类型"><a class="header" href="#简单类型">简单类型</a></h2>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">名称</th><th style="text-align: right">默认值</th><th style="text-align: left">说明</th><th style="text-align: left">备注</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>u1</code> <code>二</code></td><td style="text-align: right">0</td><td style="text-align: left">无符号 1 位二进制整数</td><td style="text-align: left">(1)</td></tr>
+<tr><td style="text-align: left"><code>u8</code></td><td style="text-align: right">0</td><td style="text-align: left">无符号 8 位二进制整数</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>u16</code></td><td style="text-align: right">0</td><td style="text-align: left">无符号 16 位二进制整数</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>u32</code></td><td style="text-align: right">0</td><td style="text-align: left">无符号 32 位二进制整数</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>u64</code></td><td style="text-align: right">0</td><td style="text-align: left">无符号 64 位二进制整数</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>u128</code></td><td style="text-align: right">0</td><td style="text-align: left">无符号 128 位二进制整数</td><td style="text-align: left">(2)</td></tr>
+<tr><td style="text-align: left"><code>i8</code></td><td style="text-align: right">0</td><td style="text-align: left">有符号 8 位二进制整数</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>i16</code></td><td style="text-align: right">0</td><td style="text-align: left">有符号 16 位二进制整数</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>i32</code></td><td style="text-align: right">0</td><td style="text-align: left">有符号 32 位二进制整数</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>i64</code></td><td style="text-align: right">0</td><td style="text-align: left">有符号 64 位二进制整数</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>i128</code></td><td style="text-align: right">0</td><td style="text-align: left">有符号 128 位二进制整数</td><td style="text-align: left">(2)</td></tr>
+<tr><td style="text-align: left"><code>f32</code></td><td style="text-align: right">0</td><td style="text-align: left">32 位浮点数</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>f64</code></td><td style="text-align: right">0</td><td style="text-align: left">64 位浮点数</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>整数</code></td><td style="text-align: right">0</td><td style="text-align: left">自动类型整数, 默认为 <code>i32</code></td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>实数</code></td><td style="text-align: right">0</td><td style="text-align: left">自动类型浮点数, 默认为 <code>f64</code></td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>数字</code></td><td style="text-align: right">0</td><td style="text-align: left">自动类型数字, 可以是整数也可以是浮点数</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>文本</code></td><td style="text-align: right">&quot;&quot;</td><td style="text-align: left">utf-8 字符串, 默认值为长度为 0 的字符串 (空字符串)</td><td style="text-align: left"></td></tr>
+</tbody></table>
+</div>
+<p>注:</p>
+<ul>
+<li>
+<p>(1) 只有 0 和 1 这两个取值, 相当于别的编程语言的布尔类型。</p>
+</li>
+<li>
+<p>(2) 部分编译模式下不支持。</p>
+</li>
+</ul>
+<h2 id="复合类型"><a class="header" href="#复合类型">复合类型</a></h2>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">名称</th><th style="text-align: right">默认值</th><th style="text-align: left">说明</th><th style="text-align: left">备注</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>数组</code></td><td style="text-align: right">[]</td><td style="text-align: left">有顺序的多个同类型数据</td><td style="text-align: left">类似 array / list</td></tr>
+<tr><td style="text-align: left"><code>集合</code></td><td style="text-align: right">[]</td><td style="text-align: left">无顺序的多个同类型数据</td><td style="text-align: left">类似 set</td></tr>
+<tr><td style="text-align: left"><code>字典</code></td><td style="text-align: right">{}</td><td style="text-align: left">键值对的集合</td><td style="text-align: left">类似 map / dict</td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="关键词"><a class="header" href="#关键词">关键词</a></h1>
+<h2 id="语句关键词"><a class="header" href="#语句关键词">语句关键词</a></h2>
+<p>在语句中使用的关键词。</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">关键词</th><th style="text-align: left">说明</th><th style="text-align: left">备注</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>的</code></td><td style="text-align: left">访问成员变量</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>是</code></td><td style="text-align: left">赋值语句</td><td style="text-align: left"></td></tr>
+</tbody></table>
+</div>
+<h2 id="行首关键词"><a class="header" href="#行首关键词">行首关键词</a></h2>
+<p>只在行首使用的关键词。</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">关键词</th><th style="text-align: left">说明</th><th style="text-align: left">备注</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>定义</code></td><td style="text-align: left">定义函数</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>定义类型</code></td><td style="text-align: left">定义新的数据类型 (结构体)</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>定义枚举</code></td><td style="text-align: left">枚举</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>定义变量</code></td><td style="text-align: left">定义变量</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>定义常量</code></td><td style="text-align: left">定义不可变变量</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>设</code></td><td style="text-align: left">定义变量并赋值</td><td style="text-align: left">比如 <code>设 x = 1</code></td></tr>
+<tr><td style="text-align: left"><code>导入</code></td><td style="text-align: left">导入别的模块的东西</td><td style="text-align: left">类似 js</td></tr>
+<tr><td style="text-align: left"><code>导出</code></td><td style="text-align: left">导出本模块的东西</td><td style="text-align: left">类似 js</td></tr>
+<tr><td style="text-align: left"><code>返回</code></td><td style="text-align: left">函数返回</td><td style="text-align: left">类似 <code>return</code></td></tr>
+<tr><td style="text-align: left"><code>循环</code></td><td style="text-align: left">循环语句</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>破</code></td><td style="text-align: left">跳出当前循环</td><td style="text-align: left">类似 <code>break</code></td></tr>
+<tr><td style="text-align: left"><code>破 0</code></td><td style="text-align: left">提前结束本次循环, 继续下一次循环</td><td style="text-align: left">类似 <code>continue</code></td></tr>
+<tr><td style="text-align: left"><code>若</code></td><td style="text-align: left">分支语句</td><td style="text-align: left">类似 <code>if</code></td></tr>
+<tr><td style="text-align: left"><code>另</code></td><td style="text-align: left">分支语句</td><td style="text-align: left">类似 <code>else</code></td></tr>
+<tr><td style="text-align: left"><code>另若</code></td><td style="text-align: left">分支语句</td><td style="text-align: left">类似 <code>else if</code></td></tr>
+<tr><td style="text-align: left"><code>匹配</code></td><td style="text-align: left">分支语句: 模式匹配</td><td style="text-align: left">类似 <code>match</code></td></tr>
+</tbody></table>
+</div>
+<h2 id="条件关键词"><a class="header" href="#条件关键词">条件关键词</a></h2>
+<p>在特定条件下作为关键词。</p>
+<div class="table-wrapper"><table><thead><tr><th style="text-align: left">关键词</th><th style="text-align: left">说明</th><th style="text-align: left">备注</th></tr></thead><tbody>
+<tr><td style="text-align: left"><code>参数</code></td><td style="text-align: left">函数的参数列表</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>标记</code></td><td style="text-align: left">标记语法</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>泛型</code></td><td style="text-align: left">泛型</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>次</code></td><td style="text-align: left">循环语句: 指定循环次数</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>至</code></td><td style="text-align: left">循环语句: 范围循环 (不包括结束值)</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>到</code></td><td style="text-align: left">循环语句: 范围循环 (包括结束值)</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>步长</code></td><td style="text-align: left">循环语句: 范围循环 (指定步长)</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>变量</code></td><td style="text-align: left">循环语句: 设置循环变量</td><td style="text-align: left"></td></tr>
+<tr><td style="text-align: left"><code>全部</code></td><td style="text-align: left">导入/导出全部</td><td style="text-align: left"></td></tr>
+</tbody></table>
+</div><div style="break-before: page; page-break-before: always;"></div><h1 id="字符串"><a class="header" href="#字符串">字符串</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="数字"><a class="header" href="#数字">数字</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="变量-1"><a class="header" href="#变量-1">变量</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="函数-1"><a class="header" href="#函数-1">函数</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="内置函数"><a class="header" href="#内置函数">内置函数</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="定义类型和枚举"><a class="header" href="#定义类型和枚举">定义类型和枚举</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="运算符"><a class="header" href="#运算符">运算符</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="表达式和语句"><a class="header" href="#表达式和语句">表达式和语句</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="分支-1"><a class="header" href="#分支-1">分支</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="循环-1"><a class="header" href="#循环-1">循环</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="模式匹配"><a class="header" href="#模式匹配">模式匹配</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="模块"><a class="header" href="#模块">模块</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="标准库"><a class="header" href="#标准库">标准库</a></h1>
+<p>TODO</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="编译器错误代码"><a class="header" href="#编译器错误代码">编译器错误代码</a></h1>
+<p>TODO</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js"></script>
+        <script src="mark.min.js"></script>
+        <script src="searcher.js"></script>
+
+        <script src="clipboard.min.js"></script>
+        <script src="highlight.js"></script>
+        <script src="book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+        <script>
+        window.addEventListener('load', function() {
+            window.setTimeout(window.print, 100);
+        });
+        </script>
+
+    </div>
+    </body>
+</html>
