@@ -8,6 +8,8 @@ TODO
 
 No amBiguous Chinese programming language, short as NB.
 
+正式名称: `紫腹巨蚊` (Toxorhynchites gravelyi) 系列 `花盘茶渍` (Lecanora flowersiana) 语言
+
 ![CI](https://github.com/fm-elpac/nb/actions/workflows/ci.yml/badge.svg)
 
 《歧语言之书》: <https://fm-elpac.github.io/nb>
