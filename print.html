@@ -256,6 +256,7 @@ This book is released under CC-BY-SA 4.0 LICENSE.</p>
 <li><a href="1_%E7%AE%80%E4%BB%8B/1_%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9-webassembly-">为什么选择 WebAssembly ?</a></li>
 <li><a href="1_%E7%AE%80%E4%BB%8B/1_%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E9%80%89%E6%8B%A9-%E6%9C%88%E5%85%94-">为什么选择 月兔 ?</a></li>
 <li><a href="1_%E7%AE%80%E4%BB%8B/1_%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.html#%E4%B8%BA%E4%BB%80%E4%B9%88%E6%8E%A8%E8%8D%90%E4%BD%BF%E7%94%A8-%E5%8F%8C%E6%8B%BC-%E8%BE%93%E5%85%A5%E6%B3%95-">为什么推荐使用 双拼 输入法 ?</a></li>
+<li><a href="1_%E7%AE%80%E4%BB%8B/1_%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98.html#%E6%AD%A7%E8%AF%AD%E8%A8%80%E4%BD%BF%E7%94%A8%E4%BB%80%E4%B9%88%E5%BC%80%E6%BA%90%E8%AE%B8%E5%8F%AF%E8%AF%81-">歧语言使用什么开源许可证 ?</a></li>
 </ul>
 <h2 id="为什么选择中文编程-"><a class="header" href="#为什么选择中文编程-">为什么选择中文编程 ?</a></h2>
 <p>希望可以提高代码的可读性, 降低编程的学习难度, 让更多的中国人能够编程。</p>
@@ -317,6 +318,29 @@ WebAssembly 的运行速度接近原生二进制代码 (native C/C++)。</p>
 各种操作系统基本都内置了对自然码的支持。</p>
 </li>
 </ul>
+<h2 id="歧语言使用什么开源许可证-"><a class="header" href="#歧语言使用什么开源许可证-">歧语言使用什么开源许可证 ?</a></h2>
+<p>歧语言的不同部分使用了不同的开源许可证 (LICENSE):</p>
+<ul>
+<li>
+<p>Creative Commons Attribution Share Alike 4.0 International
+<a href="https://spdx.org/licenses/CC-BY-SA-4.0.html">https://spdx.org/licenses/CC-BY-SA-4.0.html</a></p>
+<p><code>SPDX-Identifier: CC-BY-SA-4.0</code></p>
+<p>适用范围: 歧语言的文档, 包括 《歧语言之书》。</p>
+</li>
+<li>
+<p>MIT License
+<a href="https://spdx.org/licenses/MIT.html">https://spdx.org/licenses/MIT.html</a></p>
+<p><code>SPDX-Identifier: MIT</code></p>
+<p>适用范围: 歧语言标准库及示例代码。
+包括 《歧语言之书》 中的歧语言代码。</p>
+</li>
+<li>
+<p>GNU General Public License v3.0 or later
+<a href="https://spdx.org/licenses/GPL-3.0-or-later.html">https://spdx.org/licenses/GPL-3.0-or-later.html</a></p>
+<p><code>SPDX-Identifier: GPL-3.0-or-later</code></p>
+<p>适用范围: 歧语言编译器 (歧编 nbc)</p>
+</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="入门教程"><a class="header" href="#入门教程">入门教程</a></h1>
 <p>这里是歧语言的入门教程。</p>
 <p>本教程不要求读者有任何编程基础, 也就是不要求读者之前学习过别的编程语言。
@@ -338,6 +362,9 @@ WebAssembly 的运行速度接近原生二进制代码 (native C/C++)。</p>
 <p>只有学会编程, 才能充分利用计算机的能力。
 面对现实世界中无限多的需求, 有限多的现有软件总是显得不够用。
 当现有软件不能满足自己的时候, 为自己写代码是一种好选择。</p>
+<p>总的来说, 计算机是个好东西, 编程是个好东西。
+可以说, 学会编程只有好处, 没有坏处。
+窝真诚地祝愿所有人都能学会编程, 好东西就应该所有人都能享受。</p>
 <h2 id="关于学习编程语言-可跳过"><a class="header" href="#关于学习编程语言-可跳过">关于学习编程语言 (可跳过)</a></h2>
 <p>我们使用的编程语言, 大部分时候都是 &quot;高级语言&quot;
 (相对于 &quot;汇编语言&quot;, &quot;机器语言&quot; 等低级语言)。</p>
@@ -629,8 +656,158 @@ x = ((100 + y) * x + a) * (10 / y) + x
 <p>Unicode 是一个国际标准, 收录了许多种语言文字中的字符。
 Unicode 目前的版本是 15.0.0, 收录了几万个汉字。</p>
 <p>比如 <code>、</code> (顿号) 在 Unicode 中对应数字 <code>3001</code> (16 进制)。</p>
+<hr />
+<p>扩展阅读:</p>
+<ul>
+<li>
+<p>刨根究底字符编码之零——前言
+<a href="https://zhuanlan.zhihu.com/p/27012715">https://zhuanlan.zhihu.com/p/27012715</a></p>
+</li>
+<li>
+<p>刨根究底字符编码之一——关键术语解释(上)
+<a href="https://zhuanlan.zhihu.com/p/27012967">https://zhuanlan.zhihu.com/p/27012967</a></p>
+</li>
+</ul>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="函数"><a class="header" href="#函数">函数</a></h1>
-<p>TODO</p>
+<p><strong>函数</strong> (function) 是一小段代码。
+函数的主要作用有 <strong>重用</strong> 和 <strong>封装</strong> (抽象)。</p>
+<p>重用 (重复使用) 就是在多个地方, 多次使用同一个函数 (也就是使用同一段代码)。
+编程时有一个很好的原则: <strong>不要重复自己</strong> (DRY)。
+简单来说, 就是相同的或相似的一段代码, 尽量不要出现 3 次以上。
+如果发现自己写了很多次相同或相似的代码, 就要思考一下,
+是不是可以把这些代码改写成一个函数 ?</p>
+<h2 id="定义函数"><a class="header" href="#定义函数">定义函数</a></h2>
+<p>我们来定义一个函数, 比如:</p>
+<pre><code>定义测试:
+  输出 666。
+
+输出 222。
+</code></pre>
+<p>这里我们定义了一个函数, 函数的名称是 <code>测试</code>,
+函数体 (也就是函数内的一段代码) 有 1 行 (第 2 行)。</p>
+<p>函数体使用缩进表示其范围, 每一级缩进使用 2 个空格。</p>
+<p>函数中的代码在定义时是 <strong>不会执行</strong> 的, 所以运行上面这段代码, 只会输出 <code>222</code>。</p>
+<hr />
+<p>歧语言中定义函数的语法格式为:</p>
+<pre><code>定义名称(返回类型), 参数列表, 泛型列表:
+  # 函数体
+</code></pre>
+<p>参数和泛型都是可选的, 如果省略返回类型, 表示函数不返回数据。</p>
+<h2 id="调用函数"><a class="header" href="#调用函数">调用函数</a></h2>
+<p>如果想要执行函数中的代码, 就要 <strong>调用</strong> 函数, 比如:</p>
+<pre><code>定义测试:
+  输出 666。
+  输出 555。
+
+输出 2。
+测试。  # 调用函数
+
+输出 3。
+测试。  # 再次调用
+</code></pre>
+<p>函数可以在多个地方多次调用, 这就是函数的主要用处。
+每调用一次, 函数内的代码就会执行一次。</p>
+<h3 id="在函数中调用函数"><a class="header" href="#在函数中调用函数">在函数中调用函数</a></h3>
+<p>一个函数也可以调用别的函数, 比如:</p>
+<pre><code>定义分隔线:
+  输出 &quot;========== 窝是分隔线 ==========&quot;。
+
+定义测试:
+  分隔线。
+  输出 666。
+  分隔线。
+
+输出 222。
+测试。
+分隔线。
+</code></pre>
+<p>一个函数甚至还可以调用自己 (<strong>递归</strong> 调用)。
+递归调用需要注意结束条件, 否则可能变成死循环。</p>
+<h2 id="函数的参数"><a class="header" href="#函数的参数">函数的参数</a></h2>
+<p>上面使用的是没有参数 (0 个参数) 的函数,
+其实函数也是可以有参数的, 比如:</p>
+<pre><code>定义计算, 参数x(数字):
+  输出(x + 1)。
+
+计算 1。  # 调用函数, 并传递参数
+计算 2。
+</code></pre>
+<p>这里的函数 <code>计算</code> 具有 1 个参数, 参数名称是 <code>x</code>, 参数的数据类型是 <code>数字</code>。
+函数的所有参数都必须标明数据类型。</p>
+<p>调用有参数的函数的时候, 需要传递相应的参数。</p>
+<p>函数的参数也是一种变量, 传递参数类似于变量赋值。</p>
+<h3 id="多个参数"><a class="header" href="#多个参数">多个参数</a></h3>
+<p>函数也可以有多个参数, 比如:</p>
+<pre><code>定义计算, 参数x(数字)、y(数字):
+  输出(x + y)。
+
+计算 1、2。
+计算 42、38。
+</code></pre>
+<p>函数的多个参数之间以 <code>、</code> (顿号) 分隔。</p>
+<h2 id="函数的返回"><a class="header" href="#函数的返回">函数的返回</a></h2>
+<p>函数也可以有返回值, 比如:</p>
+<pre><code>定义计算(数字), 参数x(数字):
+  x + 1  # 自动返回
+
+设 x = 计算 2
+输出x。
+</code></pre>
+<p>首先, 需要指定函数返回值的数据类型。
+函数最后一个表达式的值会自动返回。</p>
+<p>然后可以把函数返回的数据存储在变量中 (赋值)。</p>
+<p>也可以手动返回数据, 比如:</p>
+<pre><code>定义取值(数字):
+  返回 2。
+
+设 x = 取值
+输出x。
+</code></pre>
+<p>相当于:</p>
+<pre><code>定义取值(数字):
+  2
+
+设 x = 取值
+输出x。
+</code></pre>
+<p><code>取值</code> 是一个没有参数但是有返回值的函数, 返回的数据类型是 <code>数字</code>。</p>
+<h3 id="提前返回"><a class="header" href="#提前返回">提前返回</a></h3>
+<p>在函数的执行中可以提前返回, 比如:</p>
+<pre><code>定义测试:
+  输出 222。
+  输出 333。
+  返回。  # 此处
+  输出 444。
+  输出 555。
+
+输出 &quot;==== 标记 1&quot;。
+测试。
+输出 &quot;==== 标记 2&quot;。
+</code></pre>
+<p>一旦返回, 函数中剩下的代码就不会再执行。</p>
+<h2 id="封装"><a class="header" href="#封装">封装</a></h2>
+<p>封装是一种方法, 就是把底层的具体细节给隐藏起来,
+使用者无需关心具体的内部细节, 直接使用就可以了。</p>
+<p>比如我们可以写一个复杂的函数, 这个函数就是封装的一种具体形式。
+使用这个函数的人, 只需简单的调用这个函数, 就能达到想要的效果,
+而不用知道这个函数具体是怎么实现的。</p>
+<p>把很多个有用的函数集中起来, 就得到了 <strong>函数库</strong> (library)。
+比如 Windows 操作系统中的 <code>.dll</code> 文件, GNU/Linux 操作系统中的 <code>.so</code> 文件,
+就是一种函数库。</p>
+<h3 id="标准库"><a class="header" href="#标准库">标准库</a></h3>
+<p>大部分编程语言都有自己的标准库, 里面含有每个程序都能使用的东西。</p>
+<p>歧语言的标准库名称为 <code>标准库</code>, 也就是歧语言自带 (内置) 的一个函数库,
+每个歧语言程序都可以使用标准库里面的东西。</p>
+<p>比如我们经常使用的 <code>输出</code>, 其是就是 <code>标准库</code> 中的一个函数:</p>
+<pre><code>定义输出, 参数东西(文本), 标记内部。
+</code></pre>
+<p>把东西输出到屏幕上, 具体的完整过程是很复杂的,
+但是使用这个函数的人不需要关心这些, 直接调用就好。</p>
+<h2 id="自相似-可跳过"><a class="header" href="#自相似-可跳过">自相似 (可跳过)</a></h2>
+<p>也就是部分和整体的相似性。</p>
+<p>一个函数和整个程序, 是相似的。
+程序具有参数 (输入数据), 执行结果 (输出数据), 也可能执行到一半提前终止 (退出)。
+函数具有参数 (输入数据), 返回值 (输出数据), 也可能执行一半提前终止 (提前返回)。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="分支"><a class="header" href="#分支">分支</a></h1>
 <p>TODO</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="循环"><a class="header" href="#循环">循环</a></h1>
@@ -652,6 +829,22 @@ Unicode 目前的版本是 15.0.0, 收录了几万个汉字。</p>
 <p>歧语言的注释以 <code>#</code> 开始, 至行尾结束 (类似 python)。</p>
 <h2 id="缩进-1"><a class="header" href="#缩进-1">缩进</a></h2>
 <p>歧语言使用缩进来区分代码块 (类似 python), 每级缩进必须使用 2 个空格。</p>
+<h2 id="unicode-支持"><a class="header" href="#unicode-支持">Unicode 支持</a></h2>
+<p>本节描述歧语言对 Unicode 标准的支持情况。</p>
+<ul>
+<li>
+<p>Unicode 版本: <code>15.0.0</code></p>
+<p><a href="https://www.unicode.org/versions/Unicode15.0.0/">https://www.unicode.org/versions/Unicode15.0.0/</a></p>
+</li>
+<li>
+<p>Unicode 标识符:</p>
+<p>UNICODE IDENTIFIER AND PATTERN SYNTAX
+<a href="https://www.unicode.org/reports/tr31/">https://www.unicode.org/reports/tr31/</a></p>
+<p>编译器使用的实现库:
+<a href="https://crates.io/crates/unicode-xid">https://crates.io/crates/unicode-xid</a></p>
+</li>
+</ul>
+<p>TODO</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="特殊字符"><a class="header" href="#特殊字符">特殊字符</a></h1>
 <p>这些字符会被词法分析 (token) 特殊处理:</p>
 <div class="table-wrapper"><table><thead><tr><th style="text-align: left">数值</th><th style="text-align: left">字符</th><th style="text-align: left">说明</th><th style="text-align: left">备注</th></tr></thead><tbody>
@@ -998,7 +1191,7 @@ Unicode 目前的版本是 15.0.0, 收录了几万个汉字。</p>
 <h2 id="变量覆盖"><a class="header" href="#变量覆盖">变量覆盖</a></h2>
 <p>如果重复定义同名变量, 则后定义的变量覆盖前面的变量。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="函数-1"><a class="header" href="#函数-1">函数</a></h1>
-<h2 id="定义函数"><a class="header" href="#定义函数">定义函数</a></h2>
+<h2 id="定义函数-1"><a class="header" href="#定义函数-1">定义函数</a></h2>
 <p>完整格式 (关键词 <code>定义</code>, <code>参数</code>, <code>泛型</code>):</p>
 <pre><code>定义名称(返回类型), 参数列表, 泛型列表:
   # 函数体
@@ -1068,7 +1261,7 @@ Unicode 目前的版本是 15.0.0, 收录了几万个汉字。</p>
 在后定义的函数定义位置之后, 使用后定义的函数。</p>
 </li>
 </ul>
-<h2 id="调用函数"><a class="header" href="#调用函数">调用函数</a></h2>
+<h2 id="调用函数-1"><a class="header" href="#调用函数-1">调用函数</a></h2>
 <ul>
 <li>
 <p>没有参数, 比如:</p>
@@ -1723,7 +1916,7 @@ x += 1  # 此处
 </code></pre>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="标记语法-1"><a class="header" href="#标记语法-1">标记语法</a></h1>
 <p>TODO</p>
-<div style="break-before: page; page-break-before: always;"></div><h1 id="标准库"><a class="header" href="#标准库">标准库</a></h1>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="标准库-1"><a class="header" href="#标准库-1">标准库</a></h1>
 <p>TODO</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="编译器错误代码"><a class="header" href="#编译器错误代码">编译器错误代码</a></h1>
 <p>TODO</p>
