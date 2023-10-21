@@ -1,17 +1,17 @@
 <!DOCTYPE HTML>
-<html lang="zh-CN" class="sidebar-visible no-js light">
+<html lang="zh-CN" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
         <title>歧语言之书</title>
-        <meta name="robots" content="noindex" />
+        <meta name="robots" content="noindex">
 
 
         <!-- Custom HTML head -->
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="favicon.svg">
         <link rel="shortcut icon" href="favicon.png">
@@ -32,7 +32,7 @@
         <!-- Custom theme stylesheets -->
 
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
@@ -62,29 +62,34 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
+            var body = document.querySelector('body');
             var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="1_简介/index.html"><strong aria-hidden="true">1.</strong> 简介</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1_简介/1_常见问题.html"><strong aria-hidden="true">1.1.</strong> 常见问题</a></li></ol></li><li class="chapter-item expanded "><a href="2_入门教程/index.html"><strong aria-hidden="true">2.</strong> 入门教程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2_入门教程/1_网页体验平台.html"><strong aria-hidden="true">2.1.</strong> 网页体验平台</a></li><li class="chapter-item expanded "><a href="2_入门教程/2_本地开发环境搭建.html"><strong aria-hidden="true">2.2.</strong> 本地开发环境搭建 (可跳过)</a></li><li class="chapter-item expanded "><a href="2_入门教程/3_第一个程序.html"><strong aria-hidden="true">2.3.</strong> 第一个程序</a></li><li class="chapter-item expanded "><a href="2_入门教程/4_变量.html"><strong aria-hidden="true">2.4.</strong> 变量</a></li><li class="chapter-item expanded "><a href="2_入门教程/5_函数.html"><strong aria-hidden="true">2.5.</strong> 函数</a></li><li class="chapter-item expanded "><a href="2_入门教程/6_分支.html"><strong aria-hidden="true">2.6.</strong> 分支</a></li><li class="chapter-item expanded "><a href="2_入门教程/7_循环.html"><strong aria-hidden="true">2.7.</strong> 循环</a></li><li class="chapter-item expanded "><a href="2_入门教程/8_定义类型.html"><strong aria-hidden="true">2.8.</strong> 定义类型</a></li><li class="chapter-item expanded "><a href="2_入门教程/9_模块与导入导出.html"><strong aria-hidden="true">2.9.</strong> 模块与导入导出</a></li><li class="chapter-item expanded "><a href="2_入门教程/10_输入输出.html"><strong aria-hidden="true">2.10.</strong> 输入输出</a></li></ol></li><li class="chapter-item expanded "><a href="3_参考手册/index.html"><strong aria-hidden="true">3.</strong> 参考手册</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="3_参考手册/1_源代码文件.html"><strong aria-hidden="true">3.1.</strong> 源代码文件</a></li><li class="chapter-item expanded "><a href="3_参考手册/2_特殊字符.html"><strong aria-hidden="true">3.2.</strong> 特殊字符</a></li><li class="chapter-item expanded "><a href="3_参考手册/3_内置数据类型.html"><strong aria-hidden="true">3.3.</strong> 内置数据类型</a></li><li class="chapter-item expanded "><a href="3_参考手册/4_关键词.html"><strong aria-hidden="true">3.4.</strong> 关键词</a></li><li class="chapter-item expanded "><a href="3_参考手册/5_字符串.html"><strong aria-hidden="true">3.5.</strong> 字符串</a></li><li class="chapter-item expanded "><a href="3_参考手册/6_数字.html"><strong aria-hidden="true">3.6.</strong> 数字</a></li><li class="chapter-item expanded "><a href="3_参考手册/7_变量.html"><strong aria-hidden="true">3.7.</strong> 变量</a></li><li class="chapter-item expanded "><a href="3_参考手册/8_函数.html"><strong aria-hidden="true">3.8.</strong> 函数</a></li><li class="chapter-item expanded "><a href="3_参考手册/9_内置函数.html"><strong aria-hidden="true">3.9.</strong> 内置函数</a></li><li class="chapter-item expanded "><a href="3_参考手册/10_定义类型和枚举.html"><strong aria-hidden="true">3.10.</strong> 定义类型和枚举</a></li><li class="chapter-item expanded "><a href="3_参考手册/11_运算符.html"><strong aria-hidden="true">3.11.</strong> 运算符</a></li><li class="chapter-item expanded "><a href="3_参考手册/12_表达式和语句.html"><strong aria-hidden="true">3.12.</strong> 表达式和语句</a></li><li class="chapter-item expanded "><a href="3_参考手册/13_分支.html"><strong aria-hidden="true">3.13.</strong> 分支</a></li><li class="chapter-item expanded "><a href="3_参考手册/14_循环.html"><strong aria-hidden="true">3.14.</strong> 循环</a></li><li class="chapter-item expanded "><a href="3_参考手册/15_模式匹配.html"><strong aria-hidden="true">3.15.</strong> 模式匹配</a></li><li class="chapter-item expanded "><a href="3_参考手册/16_模块.html"><strong aria-hidden="true">3.16.</strong> 模块</a></li><li class="chapter-item expanded "><a href="3_参考手册/17_标记语法.html"><strong aria-hidden="true">3.17.</strong> 标记语法</a></li><li class="chapter-item expanded "><a href="3_参考手册/18_标准库.html"><strong aria-hidden="true">3.18.</strong> 标准库</a></li><li class="chapter-item expanded "><a href="3_参考手册/19_编译器错误代码.html"><strong aria-hidden="true">3.19.</strong> 编译器错误代码</a></li><li class="chapter-item expanded "><a href="3_参考手册/20_编译器使用说明.html"><strong aria-hidden="true">3.20.</strong> 编译器使用说明</a></li><li class="chapter-item expanded "><a href="3_参考手册/21_编译器后端.html"><strong aria-hidden="true">3.21.</strong> 编译器后端</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="1_简介/index.html"><strong aria-hidden="true">1.</strong> 简介</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="1_简介/1_常见问题.html"><strong aria-hidden="true">1.1.</strong> 常见问题</a></li></ol></li><li class="chapter-item expanded "><a href="2_入门教程/index.html"><strong aria-hidden="true">2.</strong> 入门教程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="2_入门教程/1_网页体验平台.html"><strong aria-hidden="true">2.1.</strong> 网页体验平台</a></li><li class="chapter-item expanded "><a href="2_入门教程/2_本地开发环境搭建.html"><strong aria-hidden="true">2.2.</strong> 本地开发环境搭建 (可跳过)</a></li><li class="chapter-item expanded "><a href="2_入门教程/3_第一个程序.html"><strong aria-hidden="true">2.3.</strong> 第一个程序</a></li><li class="chapter-item expanded "><a href="2_入门教程/4_变量.html"><strong aria-hidden="true">2.4.</strong> 变量</a></li><li class="chapter-item expanded "><a href="2_入门教程/5_函数.html"><strong aria-hidden="true">2.5.</strong> 函数</a></li><li class="chapter-item expanded "><a href="2_入门教程/6_分支.html"><strong aria-hidden="true">2.6.</strong> 分支</a></li><li class="chapter-item expanded "><a href="2_入门教程/7_循环.html"><strong aria-hidden="true">2.7.</strong> 循环</a></li><li class="chapter-item expanded "><a href="2_入门教程/8_定义类型.html"><strong aria-hidden="true">2.8.</strong> 定义类型</a></li><li class="chapter-item expanded "><a href="2_入门教程/9_模块与导入导出.html"><strong aria-hidden="true">2.9.</strong> 模块与导入导出</a></li><li class="chapter-item expanded "><a href="2_入门教程/10_输入输出.html"><strong aria-hidden="true">2.10.</strong> 输入输出</a></li></ol></li><li class="chapter-item expanded "><a href="3_参考手册/index.html"><strong aria-hidden="true">3.</strong> 参考手册</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="3_参考手册/1_源代码文件.html"><strong aria-hidden="true">3.1.</strong> 源代码文件</a></li><li class="chapter-item expanded "><a href="3_参考手册/2_特殊字符.html"><strong aria-hidden="true">3.2.</strong> 特殊字符</a></li><li class="chapter-item expanded "><a href="3_参考手册/3_内置数据类型.html"><strong aria-hidden="true">3.3.</strong> 内置数据类型</a></li><li class="chapter-item expanded "><a href="3_参考手册/4_关键词.html"><strong aria-hidden="true">3.4.</strong> 关键词</a></li><li class="chapter-item expanded "><a href="3_参考手册/5_字符串.html"><strong aria-hidden="true">3.5.</strong> 字符串</a></li><li class="chapter-item expanded "><a href="3_参考手册/6_数字.html"><strong aria-hidden="true">3.6.</strong> 数字</a></li><li class="chapter-item expanded "><a href="3_参考手册/7_变量.html"><strong aria-hidden="true">3.7.</strong> 变量</a></li><li class="chapter-item expanded "><a href="3_参考手册/8_函数.html"><strong aria-hidden="true">3.8.</strong> 函数</a></li><li class="chapter-item expanded "><a href="3_参考手册/9_内置函数.html"><strong aria-hidden="true">3.9.</strong> 内置函数</a></li><li class="chapter-item expanded "><a href="3_参考手册/10_定义类型和枚举.html"><strong aria-hidden="true">3.10.</strong> 定义类型和枚举</a></li><li class="chapter-item expanded "><a href="3_参考手册/11_运算符.html"><strong aria-hidden="true">3.11.</strong> 运算符</a></li><li class="chapter-item expanded "><a href="3_参考手册/12_表达式和语句.html"><strong aria-hidden="true">3.12.</strong> 表达式和语句</a></li><li class="chapter-item expanded "><a href="3_参考手册/13_分支.html"><strong aria-hidden="true">3.13.</strong> 分支</a></li><li class="chapter-item expanded "><a href="3_参考手册/14_循环.html"><strong aria-hidden="true">3.14.</strong> 循环</a></li><li class="chapter-item expanded "><a href="3_参考手册/15_模式匹配.html"><strong aria-hidden="true">3.15.</strong> 模式匹配</a></li><li class="chapter-item expanded "><a href="3_参考手册/16_模块.html"><strong aria-hidden="true">3.16.</strong> 模块</a></li><li class="chapter-item expanded "><a href="3_参考手册/17_标记语法.html"><strong aria-hidden="true">3.17.</strong> 标记语法</a></li><li class="chapter-item expanded "><a href="3_参考手册/18_标准库.html"><strong aria-hidden="true">3.18.</strong> 标准库</a></li><li class="chapter-item expanded "><a href="3_参考手册/19_编译器错误代码.html"><strong aria-hidden="true">3.19.</strong> 编译器错误代码</a></li><li class="chapter-item expanded "><a href="3_参考手册/20_编译器使用说明.html"><strong aria-hidden="true">3.20.</strong> 编译器使用说明</a></li><li class="chapter-item expanded "><a href="3_参考手册/21_编译器后端.html"><strong aria-hidden="true">3.21.</strong> 编译器后端</a></li><li class="chapter-item expanded "><a href="3_参考手册/22_未来计划.html"><strong aria-hidden="true">3.22.</strong> 未来计划</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -117,9 +122,9 @@
                                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -172,10 +177,12 @@
                     <main>
                         <p>欢迎阅读 《歧语言之书》 !</p>
 <p>本书是歧语言的主要文档, 包含入门教程, 参考手册等。</p>
-<p><strong>草稿</strong>: 注意目前施工中, 部分内容不完整。</p>
+<p><strong>注意: 目前施工中, 部分内容不完整。</strong></p>
 <h2 id="简介"><a class="header" href="#简介">简介</a></h2>
 <p>无歧义中文编程语言, 简称 <strong>歧语言</strong> (nb_lang)。</p>
 <p>No amBiguous Chinese programming language, short as NB.</p>
+<p><strong>警告: 歧语言项目目前还处于很早期的阶段, 各方面很不完善, 潜藏着大量的 BUG 和错误, 没有进行完善的安全评估, 所以请勿用于处理敏感数据。</strong>
+<strong>歧语言目前被设计仅用于学习编程, 请勿用于重要的关键任务。</strong></p>
 <h2 id="主要特点"><a class="header" href="#主要特点">主要特点</a></h2>
 <ul>
 <li>
@@ -1080,6 +1087,16 @@ Unicode 目前的版本是 15.0.0, 收录了几万个汉字。</p>
 </tbody></table>
 </div>
 <p>源代码中禁止出现的 Unicode 字符:</p>
+<ul>
+<li>
+<p>Unicode 控制字符: 除了上述特殊字符之外的所有 Unicode 控制字符。</p>
+<p>使用 (rust) <a href="https://doc.rust-lang.org/std/primitive.char.html#method.is_control"><code>char.is_control()</code></a> 判断。</p>
+</li>
+<li>
+<p>Unicode 空白字符: 除了上述特殊字符之外的所有 Unicode 空白字符。</p>
+<p>使用 (rust) <a href="https://doc.rust-lang.org/std/primitive.char.html#method.is_whitespace"><code>char.is_whitespace()</code></a> 判断。</p>
+</li>
+</ul>
 <p>TODO</p>
 <h2 id="标识符"><a class="header" href="#标识符">标识符</a></h2>
 <p>本节详细说明哪些字符可以作为歧语言的标识符。</p>
@@ -2130,7 +2147,131 @@ x += 1  # 此处
 <div style="break-before: page; page-break-before: always;"></div><h1 id="标准库-1"><a class="header" href="#标准库-1">标准库</a></h1>
 <p>TODO</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="编译器错误代码"><a class="header" href="#编译器错误代码">编译器错误代码</a></h1>
-<p>TODO</p>
+<p>本章列出歧语言编译器所有的错误代码, 进行解释, 并提供解决方法。</p>
+<p>目录:</p>
+<ul>
+<li>
+<p><a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/19_%E7%BC%96%E8%AF%91%E5%99%A8%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html#ne0001-%E6%BA%90%E6%96%87%E4%BB%B6-utf-8-%E7%BC%96%E7%A0%81%E9%94%99%E8%AF%AF"><code>NE0001</code> 源文件 utf-8 编码错误</a></p>
+</li>
+<li>
+<p><a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/19_%E7%BC%96%E8%AF%91%E5%99%A8%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html#ne0002-%E6%BA%90%E6%96%87%E4%BB%B6%E6%8D%A2%E8%A1%8C%E7%AC%A6%E9%94%99%E8%AF%AF"><code>NE0002</code> 源文件换行符错误</a></p>
+</li>
+<li>
+<p><a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/19_%E7%BC%96%E8%AF%91%E5%99%A8%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html#ne0003-%E6%9C%AA%E7%9F%A5%E7%9A%84%E6%BA%90%E6%96%87%E4%BB%B6%E6%96%87%E4%BB%B6%E5%90%8D%E5%90%8E%E7%BC%80"><code>NE0003</code> 未知的源文件文件名后缀</a></p>
+</li>
+<li>
+<p><a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/19_%E7%BC%96%E8%AF%91%E5%99%A8%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html#ne0004-%E6%BA%90%E4%BB%A3%E7%A0%81%E5%90%AB%E6%9C%89%E7%A6%81%E6%AD%A2%E4%BD%BF%E7%94%A8%E7%9A%84%E5%AD%97%E7%AC%A6"><code>NE0004</code> 源代码含有禁止使用的字符</a></p>
+</li>
+<li>
+<p><a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/19_%E7%BC%96%E8%AF%91%E5%99%A8%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html#ne0005-%E9%94%99%E8%AF%AF%E7%9A%84%E7%BC%A9%E8%BF%9B%E9%95%BF%E5%BA%A6"><code>NE0005</code> 错误的缩进长度</a></p>
+</li>
+<li>
+<p><a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/19_%E7%BC%96%E8%AF%91%E5%99%A8%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html#ne0006-%E7%A6%81%E6%AD%A2%E5%88%86%E8%AF%8D%E4%B8%AD%E5%90%AB%E6%9C%89%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8%E7%9A%84%E5%AD%97%E7%AC%A6"><code>NE0006</code> 禁止分词中含有不能使用的字符</a></p>
+</li>
+<li>
+<p><a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/19_%E7%BC%96%E8%AF%91%E5%99%A8%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html#ne0007-%E9%94%99%E8%AF%AF%E7%9A%84%E6%95%B0%E5%AD%97%E6%A0%BC%E5%BC%8F"><code>NE0007</code> 错误的数字格式</a></p>
+</li>
+<li>
+<p><a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/19_%E7%BC%96%E8%AF%91%E5%99%A8%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html#ne0008-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%8D%E8%83%BD%E6%8D%A2%E8%A1%8C"><code>NE0008</code> 字符串不能换行</a></p>
+</li>
+<li>
+<p><a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/19_%E7%BC%96%E8%AF%91%E5%99%A8%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html#ne0009-%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%B8%AD%E9%94%99%E8%AF%AF%E7%9A%84%E8%BD%AC%E4%B9%89"><code>NE0009</code> 字符串中错误的转义</a></p>
+</li>
+<li>
+<p><a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/19_%E7%BC%96%E8%AF%91%E5%99%A8%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html#ne0010-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%92%E5%80%BC%E4%B8%8D%E8%83%BD%E4%BD%BF%E7%94%A8%E5%A4%8D%E6%9D%82%E8%A1%A8%E8%BE%BE%E5%BC%8F"><code>NE0010</code> 字符串插值不能使用复杂表达式</a></p>
+</li>
+<li>
+<p><a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/19_%E7%BC%96%E8%AF%91%E5%99%A8%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html#ne0011-%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%8F%92%E5%85%A5%E9%94%99%E8%AF%AF%E7%9A%84%E5%AD%97%E7%AC%A6%E7%BC%96%E5%8F%B7"><code>NE0011</code> 字符串插入错误的字符编号</a></p>
+</li>
+<li>
+<p><a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/19_%E7%BC%96%E8%AF%91%E5%99%A8%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html#ne0012-%E5%B0%8F%E6%8B%AC%E5%8F%B7%E4%B8%8D%E5%8C%B9%E9%85%8D"><code>NE0012</code> 小括号不匹配</a></p>
+</li>
+<li>
+<p><a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/19_%E7%BC%96%E8%AF%91%E5%99%A8%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html#ne0013-%E4%B8%AD%E6%8B%AC%E5%8F%B7%E4%B8%8D%E5%8C%B9%E9%85%8D"><code>NE0013</code> 中括号不匹配</a></p>
+</li>
+<li>
+<p><a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/19_%E7%BC%96%E8%AF%91%E5%99%A8%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html#ne0014-%E5%A4%A7%E6%8B%AC%E5%8F%B7%E4%B8%8D%E5%8C%B9%E9%85%8D"><code>NE0014</code> 大括号不匹配</a></p>
+</li>
+<li>
+<p><a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/19_%E7%BC%96%E8%AF%91%E5%99%A8%E9%94%99%E8%AF%AF%E4%BB%A3%E7%A0%81.html#ne9999-%E7%BC%96%E8%AF%91%E5%99%A8%E5%B0%9A%E6%9C%AA%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%8A%9F%E8%83%BD"><code>NE9999</code> 编译器尚未实现的功能</a></p>
+</li>
+</ul>
+<h2 id="ne0001-源文件-utf-8-编码错误"><a class="header" href="#ne0001-源文件-utf-8-编码错误"><code>NE0001</code> 源文件 utf-8 编码错误</a></h2>
+<p>在使用 utf-8 编码方式对源文件进行解码时遇到错误。</p>
+<p>解决方式:</p>
+<p>重新保存源代码: 源代码必须使用 utf-8 编码保存 (无 BOM)。
+详见 <a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/./1_%E6%BA%90%E4%BB%A3%E7%A0%81%E6%96%87%E4%BB%B6.html">源代码文件</a>。</p>
+<h2 id="ne0002-源文件换行符错误"><a class="header" href="#ne0002-源文件换行符错误"><code>NE0002</code> 源文件换行符错误</a></h2>
+<p>源文件使用了错误的换行符。</p>
+<p>解决方式:</p>
+<p>重新保存源代码: 源代码必须使用 UNIX 风格的换行符 (LF <code>0x0a</code>)。
+详见 <a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/./1_%E6%BA%90%E4%BB%A3%E7%A0%81%E6%96%87%E4%BB%B6.html">源代码文件</a>。</p>
+<h2 id="ne0003-未知的源文件文件名后缀"><a class="header" href="#ne0003-未知的源文件文件名后缀"><code>NE0003</code> 未知的源文件文件名后缀</a></h2>
+<p>源文件的文件名后缀未知。</p>
+<p>解决方式:</p>
+<p>修改源文件的文件名: 源文件的文件名后缀为 <code>.歧</code>。
+详见 <a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/./1_%E6%BA%90%E4%BB%A3%E7%A0%81%E6%96%87%E4%BB%B6.html">源代码文件</a>。</p>
+<h2 id="ne0004-源代码含有禁止使用的字符"><a class="header" href="#ne0004-源代码含有禁止使用的字符"><code>NE0004</code> 源代码含有禁止使用的字符</a></h2>
+<p>源代码中出现了禁止在源代码中使用的 Unicode 字符。</p>
+<p>解决方式:</p>
+<p>删除禁止使用的字符。
+详见 <a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/./2_%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6.html">特殊字符</a>。</p>
+<h2 id="ne0005-错误的缩进长度"><a class="header" href="#ne0005-错误的缩进长度"><code>NE0005</code> 错误的缩进长度</a></h2>
+<p>无法识别缩进的层级。</p>
+<p>解决方式:</p>
+<p>修改源代码: 行首的每级缩进必须使用 2 个空格。
+详见 <a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/./1_%E6%BA%90%E4%BB%A3%E7%A0%81%E6%96%87%E4%BB%B6.html">源代码文件</a>。</p>
+<h2 id="ne0006-禁止分词中含有不能使用的字符"><a class="header" href="#ne0006-禁止分词中含有不能使用的字符"><code>NE0006</code> 禁止分词中含有不能使用的字符</a></h2>
+<p>在禁止分词语法 (` 反引号) 中, 出现了不能使用的字符。</p>
+<p>解决方式:</p>
+<p>删除不能使用的字符。
+详见 <a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/./2_%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6.html">特殊字符</a>。</p>
+<h2 id="ne0007-错误的数字格式"><a class="header" href="#ne0007-错误的数字格式"><code>NE0007</code> 错误的数字格式</a></h2>
+<p>无法解析的数字字面量格式。</p>
+<p>解决方式:</p>
+<p>修改数字的写法。
+详见 <a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/./6_%E6%95%B0%E5%AD%97.html">数字</a>。</p>
+<h2 id="ne0008-字符串不能换行"><a class="header" href="#ne0008-字符串不能换行"><code>NE0008</code> 字符串不能换行</a></h2>
+<p>字符串字面量必须在一行内结束。</p>
+<p>解决方式:</p>
+<p>修改字符串的写法。
+详见 <a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/./5_%E5%AD%97%E7%AC%A6%E4%B8%B2.html">字符串</a>。</p>
+<h2 id="ne0009-字符串中错误的转义"><a class="header" href="#ne0009-字符串中错误的转义"><code>NE0009</code> 字符串中错误的转义</a></h2>
+<p>字符串字面量中无法识别的转义序列。</p>
+<p>解决方式:</p>
+<p>修改字符串的写法。
+详见 <a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/./5_%E5%AD%97%E7%AC%A6%E4%B8%B2.html">字符串</a>。</p>
+<h2 id="ne0010-字符串插值不能使用复杂表达式"><a class="header" href="#ne0010-字符串插值不能使用复杂表达式"><code>NE0010</code> 字符串插值不能使用复杂表达式</a></h2>
+<p>字符串插值 <code>\()</code> 中不能使用复杂的表达式。</p>
+<p>解决方式:</p>
+<p>在字符串插值中使用简单的表达式, 比如变量名。
+详见 <a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/./5_%E5%AD%97%E7%AC%A6%E4%B8%B2.html">字符串</a>。</p>
+<h2 id="ne0011-字符串插入错误的字符编号"><a class="header" href="#ne0011-字符串插入错误的字符编号"><code>NE0011</code> 字符串插入错误的字符编号</a></h2>
+<p>字符串插入 Unicode 字符编号 <code>\[]</code> 中出现的编号, 不是正确的 Unicode 字符。</p>
+<p>不是所有的整数都表示 Unicode 字符。
+目前允许使用的 Unicode 字符编号的范围是
+<code>0</code> ~ <code>0xd7ff</code>,
+<code>0xe000</code> ~ <code>0x10ffff</code>。</p>
+<p>参考资料: <a href="https://doc.rust-lang.org/std/primitive.char.html">https://doc.rust-lang.org/std/primitive.char.html</a></p>
+<p>解决方式:</p>
+<p>检查并修改 Unicode 字符编号。
+详见 <a href="3_%E5%8F%82%E8%80%83%E6%89%8B%E5%86%8C/./5_%E5%AD%97%E7%AC%A6%E4%B8%B2.html">字符串</a>。</p>
+<h2 id="ne0012-小括号不匹配"><a class="header" href="#ne0012-小括号不匹配"><code>NE0012</code> 小括号不匹配</a></h2>
+<p>代码中出现的小括号 <code>()</code> 没有成对出现, 无法匹配。</p>
+<p>解决方式:</p>
+<p>检查并修改代码。</p>
+<h2 id="ne0013-中括号不匹配"><a class="header" href="#ne0013-中括号不匹配"><code>NE0013</code> 中括号不匹配</a></h2>
+<p>代码中出现的中括号 <code>[]</code> 没有成对出现, 无法匹配。</p>
+<p>解决方式:</p>
+<p>检查并修改代码。</p>
+<h2 id="ne0014-大括号不匹配"><a class="header" href="#ne0014-大括号不匹配"><code>NE0014</code> 大括号不匹配</a></h2>
+<p>代码中出现的大括号 <code>{}</code> 没有成对出现, 无法匹配。</p>
+<p>解决方式:</p>
+<p>检查并修改代码。</p>
+<h2 id="ne9999-编译器尚未实现的功能"><a class="header" href="#ne9999-编译器尚未实现的功能"><code>NE9999</code> 编译器尚未实现的功能</a></h2>
+<p>编译器目前还没实现这个功能。</p>
+<p>解决方式:</p>
+<p>不要在代码中使用这个功能。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="编译器使用说明"><a class="header" href="#编译器使用说明">编译器使用说明</a></h1>
 <p>本章详细介绍歧语言编译器的使用, 包括选项参数等。</p>
 <p>TODO</p>
@@ -2166,6 +2307,42 @@ x += 1  # 此处
 然后再编译成二进制代码 (CPU 指令, 比如 RISC-V)。</p>
 <p>这个后端不用于编译到 <code>wasm</code>。
 用于一些特殊用途。</p>
+<div style="break-before: page; page-break-before: always;"></div><h1 id="未来计划-roadmap"><a class="header" href="#未来计划-roadmap">未来计划 (roadmap)</a></h1>
+<ul>
+<li>
+<p>严格按照 Unicode 推荐的标准来处理源代码和标识符。</p>
+<p>由于 Unicode 较高的复杂度, 实现这一点并不容易。</p>
+<p>参考资料:</p>
+<ul>
+<li>
+<p>UNICODE NORMALIZATION FORMS
+<a href="https://www.unicode.org/reports/tr15/">https://www.unicode.org/reports/tr15/</a></p>
+</li>
+<li>
+<p>UNICODE IDENTIFIER AND PATTERN SYNTAX
+<a href="https://www.unicode.org/reports/tr31/">https://www.unicode.org/reports/tr31/</a></p>
+</li>
+<li>
+<p>UNICODE SECURITY CONSIDERATIONS
+<a href="https://www.unicode.org/reports/tr36/">https://www.unicode.org/reports/tr36/</a></p>
+</li>
+<li>
+<p>UNICODE SECURITY MECHANISMS
+<a href="https://www.unicode.org/reports/tr39/">https://www.unicode.org/reports/tr39/</a></p>
+</li>
+<li>
+<p>UNICODE SOURCE CODE HANDLING
+<a href="https://www.unicode.org/reports/tr55/">https://www.unicode.org/reports/tr55/</a></p>
+</li>
+</ul>
+</li>
+<li>
+<p>完善歧义检测:</p>
+<p>编译器发现歧义时, 报告编译错误。</p>
+<p>比如: 分词歧义</p>
+</li>
+</ul>
+<p>TODO</p>
 
                     </main>
 

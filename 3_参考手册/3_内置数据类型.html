@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang="zh-CN" class="sidebar-visible no-js light">
+<html lang="zh-CN" class="light" dir="ltr">
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
@@ -10,7 +10,7 @@
         
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#ffffff" />
+        <meta name="theme-color" content="#ffffff">
 
         <link rel="icon" href="../favicon.svg">
         <link rel="shortcut icon" href="../favicon.png">
@@ -31,7 +31,7 @@
         <!-- Custom theme stylesheets -->
 
     </head>
-    <body>
+    <body class="sidebar-visible no-js">
     <div id="body-container">
         <!-- Provide site root to javascript -->
         <script>
@@ -61,29 +61,34 @@
             try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
             if (theme === null || theme === undefined) { theme = default_theme; }
             var html = document.querySelector('html');
-            html.classList.remove('no-js')
             html.classList.remove('light')
             html.classList.add(theme);
-            html.classList.add('js');
+            var body = document.querySelector('body');
+            body.classList.remove('no-js')
+            body.classList.add('js');
         </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
 
         <!-- Hide / unhide sidebar before it is displayed -->
         <script>
-            var html = document.querySelector('html');
+            var body = document.querySelector('body');
             var sidebar = null;
+            var sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
             if (document.body.clientWidth >= 1080) {
                 try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
                 sidebar = sidebar || 'visible';
             } else {
                 sidebar = 'hidden';
             }
-            html.classList.remove('sidebar-visible');
-            html.classList.add("sidebar-" + sidebar);
+            sidebar_toggle.checked = sidebar === 'visible';
+            body.classList.remove('sidebar-visible');
+            body.classList.add("sidebar-" + sidebar);
         </script>
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded "><a href="../1_简介/index.html"><strong aria-hidden="true">1.</strong> 简介</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1_简介/1_常见问题.html"><strong aria-hidden="true">1.1.</strong> 常见问题</a></li></ol></li><li class="chapter-item expanded "><a href="../2_入门教程/index.html"><strong aria-hidden="true">2.</strong> 入门教程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2_入门教程/1_网页体验平台.html"><strong aria-hidden="true">2.1.</strong> 网页体验平台</a></li><li class="chapter-item expanded "><a href="../2_入门教程/2_本地开发环境搭建.html"><strong aria-hidden="true">2.2.</strong> 本地开发环境搭建 (可跳过)</a></li><li class="chapter-item expanded "><a href="../2_入门教程/3_第一个程序.html"><strong aria-hidden="true">2.3.</strong> 第一个程序</a></li><li class="chapter-item expanded "><a href="../2_入门教程/4_变量.html"><strong aria-hidden="true">2.4.</strong> 变量</a></li><li class="chapter-item expanded "><a href="../2_入门教程/5_函数.html"><strong aria-hidden="true">2.5.</strong> 函数</a></li><li class="chapter-item expanded "><a href="../2_入门教程/6_分支.html"><strong aria-hidden="true">2.6.</strong> 分支</a></li><li class="chapter-item expanded "><a href="../2_入门教程/7_循环.html"><strong aria-hidden="true">2.7.</strong> 循环</a></li><li class="chapter-item expanded "><a href="../2_入门教程/8_定义类型.html"><strong aria-hidden="true">2.8.</strong> 定义类型</a></li><li class="chapter-item expanded "><a href="../2_入门教程/9_模块与导入导出.html"><strong aria-hidden="true">2.9.</strong> 模块与导入导出</a></li><li class="chapter-item expanded "><a href="../2_入门教程/10_输入输出.html"><strong aria-hidden="true">2.10.</strong> 输入输出</a></li></ol></li><li class="chapter-item expanded "><a href="../3_参考手册/index.html"><strong aria-hidden="true">3.</strong> 参考手册</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3_参考手册/1_源代码文件.html"><strong aria-hidden="true">3.1.</strong> 源代码文件</a></li><li class="chapter-item expanded "><a href="../3_参考手册/2_特殊字符.html"><strong aria-hidden="true">3.2.</strong> 特殊字符</a></li><li class="chapter-item expanded "><a href="../3_参考手册/3_内置数据类型.html" class="active"><strong aria-hidden="true">3.3.</strong> 内置数据类型</a></li><li class="chapter-item expanded "><a href="../3_参考手册/4_关键词.html"><strong aria-hidden="true">3.4.</strong> 关键词</a></li><li class="chapter-item expanded "><a href="../3_参考手册/5_字符串.html"><strong aria-hidden="true">3.5.</strong> 字符串</a></li><li class="chapter-item expanded "><a href="../3_参考手册/6_数字.html"><strong aria-hidden="true">3.6.</strong> 数字</a></li><li class="chapter-item expanded "><a href="../3_参考手册/7_变量.html"><strong aria-hidden="true">3.7.</strong> 变量</a></li><li class="chapter-item expanded "><a href="../3_参考手册/8_函数.html"><strong aria-hidden="true">3.8.</strong> 函数</a></li><li class="chapter-item expanded "><a href="../3_参考手册/9_内置函数.html"><strong aria-hidden="true">3.9.</strong> 内置函数</a></li><li class="chapter-item expanded "><a href="../3_参考手册/10_定义类型和枚举.html"><strong aria-hidden="true">3.10.</strong> 定义类型和枚举</a></li><li class="chapter-item expanded "><a href="../3_参考手册/11_运算符.html"><strong aria-hidden="true">3.11.</strong> 运算符</a></li><li class="chapter-item expanded "><a href="../3_参考手册/12_表达式和语句.html"><strong aria-hidden="true">3.12.</strong> 表达式和语句</a></li><li class="chapter-item expanded "><a href="../3_参考手册/13_分支.html"><strong aria-hidden="true">3.13.</strong> 分支</a></li><li class="chapter-item expanded "><a href="../3_参考手册/14_循环.html"><strong aria-hidden="true">3.14.</strong> 循环</a></li><li class="chapter-item expanded "><a href="../3_参考手册/15_模式匹配.html"><strong aria-hidden="true">3.15.</strong> 模式匹配</a></li><li class="chapter-item expanded "><a href="../3_参考手册/16_模块.html"><strong aria-hidden="true">3.16.</strong> 模块</a></li><li class="chapter-item expanded "><a href="../3_参考手册/17_标记语法.html"><strong aria-hidden="true">3.17.</strong> 标记语法</a></li><li class="chapter-item expanded "><a href="../3_参考手册/18_标准库.html"><strong aria-hidden="true">3.18.</strong> 标准库</a></li><li class="chapter-item expanded "><a href="../3_参考手册/19_编译器错误代码.html"><strong aria-hidden="true">3.19.</strong> 编译器错误代码</a></li><li class="chapter-item expanded "><a href="../3_参考手册/20_编译器使用说明.html"><strong aria-hidden="true">3.20.</strong> 编译器使用说明</a></li><li class="chapter-item expanded "><a href="../3_参考手册/21_编译器后端.html"><strong aria-hidden="true">3.21.</strong> 编译器后端</a></li></ol></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded "><a href="../1_简介/index.html"><strong aria-hidden="true">1.</strong> 简介</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../1_简介/1_常见问题.html"><strong aria-hidden="true">1.1.</strong> 常见问题</a></li></ol></li><li class="chapter-item expanded "><a href="../2_入门教程/index.html"><strong aria-hidden="true">2.</strong> 入门教程</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../2_入门教程/1_网页体验平台.html"><strong aria-hidden="true">2.1.</strong> 网页体验平台</a></li><li class="chapter-item expanded "><a href="../2_入门教程/2_本地开发环境搭建.html"><strong aria-hidden="true">2.2.</strong> 本地开发环境搭建 (可跳过)</a></li><li class="chapter-item expanded "><a href="../2_入门教程/3_第一个程序.html"><strong aria-hidden="true">2.3.</strong> 第一个程序</a></li><li class="chapter-item expanded "><a href="../2_入门教程/4_变量.html"><strong aria-hidden="true">2.4.</strong> 变量</a></li><li class="chapter-item expanded "><a href="../2_入门教程/5_函数.html"><strong aria-hidden="true">2.5.</strong> 函数</a></li><li class="chapter-item expanded "><a href="../2_入门教程/6_分支.html"><strong aria-hidden="true">2.6.</strong> 分支</a></li><li class="chapter-item expanded "><a href="../2_入门教程/7_循环.html"><strong aria-hidden="true">2.7.</strong> 循环</a></li><li class="chapter-item expanded "><a href="../2_入门教程/8_定义类型.html"><strong aria-hidden="true">2.8.</strong> 定义类型</a></li><li class="chapter-item expanded "><a href="../2_入门教程/9_模块与导入导出.html"><strong aria-hidden="true">2.9.</strong> 模块与导入导出</a></li><li class="chapter-item expanded "><a href="../2_入门教程/10_输入输出.html"><strong aria-hidden="true">2.10.</strong> 输入输出</a></li></ol></li><li class="chapter-item expanded "><a href="../3_参考手册/index.html"><strong aria-hidden="true">3.</strong> 参考手册</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="../3_参考手册/1_源代码文件.html"><strong aria-hidden="true">3.1.</strong> 源代码文件</a></li><li class="chapter-item expanded "><a href="../3_参考手册/2_特殊字符.html"><strong aria-hidden="true">3.2.</strong> 特殊字符</a></li><li class="chapter-item expanded "><a href="../3_参考手册/3_内置数据类型.html" class="active"><strong aria-hidden="true">3.3.</strong> 内置数据类型</a></li><li class="chapter-item expanded "><a href="../3_参考手册/4_关键词.html"><strong aria-hidden="true">3.4.</strong> 关键词</a></li><li class="chapter-item expanded "><a href="../3_参考手册/5_字符串.html"><strong aria-hidden="true">3.5.</strong> 字符串</a></li><li class="chapter-item expanded "><a href="../3_参考手册/6_数字.html"><strong aria-hidden="true">3.6.</strong> 数字</a></li><li class="chapter-item expanded "><a href="../3_参考手册/7_变量.html"><strong aria-hidden="true">3.7.</strong> 变量</a></li><li class="chapter-item expanded "><a href="../3_参考手册/8_函数.html"><strong aria-hidden="true">3.8.</strong> 函数</a></li><li class="chapter-item expanded "><a href="../3_参考手册/9_内置函数.html"><strong aria-hidden="true">3.9.</strong> 内置函数</a></li><li class="chapter-item expanded "><a href="../3_参考手册/10_定义类型和枚举.html"><strong aria-hidden="true">3.10.</strong> 定义类型和枚举</a></li><li class="chapter-item expanded "><a href="../3_参考手册/11_运算符.html"><strong aria-hidden="true">3.11.</strong> 运算符</a></li><li class="chapter-item expanded "><a href="../3_参考手册/12_表达式和语句.html"><strong aria-hidden="true">3.12.</strong> 表达式和语句</a></li><li class="chapter-item expanded "><a href="../3_参考手册/13_分支.html"><strong aria-hidden="true">3.13.</strong> 分支</a></li><li class="chapter-item expanded "><a href="../3_参考手册/14_循环.html"><strong aria-hidden="true">3.14.</strong> 循环</a></li><li class="chapter-item expanded "><a href="../3_参考手册/15_模式匹配.html"><strong aria-hidden="true">3.15.</strong> 模式匹配</a></li><li class="chapter-item expanded "><a href="../3_参考手册/16_模块.html"><strong aria-hidden="true">3.16.</strong> 模块</a></li><li class="chapter-item expanded "><a href="../3_参考手册/17_标记语法.html"><strong aria-hidden="true">3.17.</strong> 标记语法</a></li><li class="chapter-item expanded "><a href="../3_参考手册/18_标准库.html"><strong aria-hidden="true">3.18.</strong> 标准库</a></li><li class="chapter-item expanded "><a href="../3_参考手册/19_编译器错误代码.html"><strong aria-hidden="true">3.19.</strong> 编译器错误代码</a></li><li class="chapter-item expanded "><a href="../3_参考手册/20_编译器使用说明.html"><strong aria-hidden="true">3.20.</strong> 编译器使用说明</a></li><li class="chapter-item expanded "><a href="../3_参考手册/21_编译器后端.html"><strong aria-hidden="true">3.21.</strong> 编译器后端</a></li><li class="chapter-item expanded "><a href="../3_参考手册/22_未来计划.html"><strong aria-hidden="true">3.22.</strong> 未来计划</a></li></ol></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -116,9 +121,9 @@
                                 <div id="menu-bar-hover-placeholder"></div>
                 <div id="menu-bar" class="menu-bar sticky">
                     <div class="left-buttons">
-                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
                             <i class="fa fa-bars"></i>
-                        </button>
+                        </label>
                         <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
                             <i class="fa fa-paint-brush"></i>
                         </button>
@@ -221,7 +226,7 @@
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
-                            <a rel="next" href="../3_参考手册/4_关键词.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                            <a rel="next prefetch" href="../3_参考手册/4_关键词.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                                 <i class="fa fa-angle-right"></i>
                             </a>
 
@@ -235,7 +240,7 @@
                         <i class="fa fa-angle-left"></i>
                     </a>
 
-                    <a rel="next" href="../3_参考手册/4_关键词.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                    <a rel="next prefetch" href="../3_参考手册/4_关键词.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
                         <i class="fa fa-angle-right"></i>
                     </a>
             </nav>
