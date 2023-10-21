@@ -14,6 +14,9 @@ No amBiguous Chinese programming language, short as NB.
 
 《歧语言之书》: <https://fm-elpac.github.io/nb>
 
+**警告: 歧语言项目目前还处于很早期的阶段, 各方面很不完善, 潜藏着大量的 BUG 和错误, 没有进行完善的安全评估, 所以请勿用于处理敏感数据。**
+**歧语言目前被设计仅用于学习编程, 请勿用于重要的关键任务。**
+
 
 ## 主要特点
 
